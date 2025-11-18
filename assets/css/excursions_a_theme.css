@@ -1,0 +1,719 @@
+/* ============================================
+   TANY MENA TOURS - EXCURSIONS À THÈMES
+   Professional Tourism Website Styles
+   ============================================ */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+  /* Color Palette - Madagascar Inspired */
+  --primary-color: #c8102e;
+  --primary-dark: #a00d25;
+  --primary-light: #e6143a;
+  --secondary-color: #2c5f2d;
+  --secondary-dark: #1e4620;
+  --accent-color: #f4a261;
+  --accent-light: #f7b77f;
+  
+  /* Neutral Colors */
+  --dark: #1a1a1a;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  --light-gray: #e5e5e5;
+  --lighter-gray: #f8f9fa;
+  --white: #ffffff;
+  
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.2);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background-color: var(--lighter-gray);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--dark);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: var(--spacing-xxl) 0;
+  min-height: 60vh;
+}
+
+/* ===== INTRODUCTION SECTION ===== */
+.intro-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.intro-card {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 5px solid var(--primary-color);
+  transition: var(--transition-normal);
+}
+
+.intro-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  padding-bottom: var(--spacing-md);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--medium-gray);
+  margin-bottom: var(--spacing-xl);
+}
+
+.intro-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.brand-highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.info-highlight {
+  background: linear-gradient(135deg, rgba(200, 16, 46, 0.05) 0%, rgba(244, 162, 97, 0.05) 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.info-highlight i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* ===== EXCURSIONS GRID ===== */
+.excursions-grid {
+  margin-top: var(--spacing-xxl);
+}
+
+.excursion-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.excursion-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-10px);
+}
+
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.excursion-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.excursion-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.btn-view {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transform: translateY(20px);
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.excursion-card:hover .btn-view {
+  transform: translateY(0);
+}
+
+.btn-view:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: var(--spacing-lg);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-fast);
+}
+
+.tag-culture { background: rgba(200, 16, 46, 0.1); color: var(--primary-color); }
+.tag-histoire { background: rgba(44, 95, 45, 0.1); color: var(--secondary-color); }
+.tag-spiritualite { background: rgba(138, 43, 226, 0.1); color: #8a2be2; }
+.tag-traditions { background: rgba(255, 140, 0, 0.1); color: #ff8c00; }
+.tag-artisanat { background: rgba(244, 162, 97, 0.2); color: #d68a4f; }
+.tag-rencontres { background: rgba(46, 139, 87, 0.1); color: #2e8b57; }
+.tag-marche { background: rgba(255, 99, 71, 0.1); color: #ff6347; }
+.tag-vie-locale { background: rgba(70, 130, 180, 0.1); color: #4682b4; }
+.tag-spectacle { background: rgba(255, 20, 147, 0.1); color: #ff1493; }
+.tag-plantes { background: rgba(34, 139, 34, 0.1); color: #228b22; }
+.tag-bien-etre { background: rgba(147, 112, 219, 0.1); color: #9370db; }
+.tag-equitation { background: rgba(139, 69, 19, 0.1); color: #8b4513; }
+.tag-nature { background: rgba(60, 179, 113, 0.1); color: #3cb371; }
+.tag-lemuriens { background: rgba(255, 165, 0, 0.1); color: #ffa500; }
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+  transition: var(--transition-fast);
+}
+
+.excursion-card:hover .card-title {
+  color: var(--primary-color);
+}
+
+.card-description {
+  color: var(--medium-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.btn-details {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  align-self: flex-start;
+}
+
+.btn-details:hover {
+  color: var(--primary-dark);
+  gap: var(--spacing-sm);
+}
+
+.btn-details i {
+  transition: var(--transition-fast);
+}
+
+.btn-details:hover i {
+  transform: translateX(5px);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.sidebar-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.sidebar-card img {
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-heading);
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--light-gray);
+  transition: var(--transition-fast);
+}
+
+.services-list li:last-child {
+  border-bottom: none;
+}
+
+.services-list li:hover {
+  padding-left: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.services-list i {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+}
+
+.contact-card .sidebar-title {
+  color: var(--white);
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.95;
+}
+
+.btn-contact {
+  background: var(--white);
+  color: var(--primary-color);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.btn-contact:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== FOOTER ===== */
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  transition: var(--transition-fast);
+}
+
+.social-link:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-5px);
+}
+
+.copyright {
+  color: var(--light-gray);
+  font-size: 0.95rem;
+}
+
+.copyright strong {
+  color: var(--white);
+}
+
+.credits {
+  color: var(--light-gray);
+  font-size: 0.95rem;
+}
+
+.designer-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.designer-link:hover {
+  color: var(--accent-color);
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-normal);
+  z-index: 999;
+  box-shadow: var(--shadow-lg);
+}
+
+.scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-5px);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  :root {
+    --spacing-xl: 2.5rem;
+    --spacing-xxl: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .sidebar {
+    position: static;
+    margin-top: var(--spacing-xl);
+  }
+  
+  .card-image-wrapper {
+    height: 220px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 2.5rem;
+  }
+  
+  .hero-section {
+    height: 350px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .intro-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .card-image-wrapper {
+    height: 200px;
+  }
+  
+  .card-body {
+    padding: var(--spacing-md);
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .scroll-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .card-tags {
+    gap: 0.3rem;
+  }
+  
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .breadcrumb {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-primary { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.text-accent { color: var(--accent-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-secondary { background-color: var(--secondary-color) !important; }
+.bg-light-gray { background-color: var(--lighter-gray) !important; }
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .header,
+  .footer,
+  .scroll-top,
+  .btn-view,
+  .btn-details,
+  .sidebar {
+    display: none !important;
+  }
+  
+  .excursion-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

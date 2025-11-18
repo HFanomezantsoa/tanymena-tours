@@ -1,0 +1,436 @@
+ :root {
+            --heading-color: #2c3e50;
+            --default-color: #555;
+            --accent-color: #e74c3c;
+            --contrast-color: #fff;
+            --surface-color: #fff;
+        }
+
+        /*--------------------------------------------------------------
+        # Travel Destination Details Section
+        --------------------------------------------------------------*/
+        .travel-destination-details .destination-hero {
+            margin-bottom: 120px;
+            position: relative;
+        }
+
+        .travel-destination-details .destination-hero .hero-content {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .travel-destination-details .destination-hero .hero-content .destination-name {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--heading-color);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .destination-hero .hero-content .destination-name {
+                font-size: 2.5rem;
+            }
+        }
+
+        .travel-destination-details .destination-hero .hero-content .destination-tagline {
+            font-size: 1.25rem;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .travel-destination-details .destination-hero .hero-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+        }
+
+        .travel-destination-details .destination-hero .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .destination-hero .hero-image img {
+                height: 350px;
+            }
+        }
+
+        .travel-destination-details .destination-hero .hero-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .travel-destination-details .destination-overview {
+            margin-bottom: 120px;
+        }
+
+        .travel-destination-details .destination-overview .overview-content h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .destination-overview .overview-content h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .travel-destination-details .destination-overview .overview-content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+        }
+
+        .travel-destination-details .destination-overview .overview-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .travel-destination-details .destination-overview .overview-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .travel-destination-details .destination-overview .overview-image img {
+            width: 100%;
+            height: 790px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .destination-overview .overview-image img {
+                height: 300px;
+            }
+        }
+
+        .travel-destination-details .destination-highlights {
+            margin-bottom: 120px;
+        }
+
+        .travel-destination-details .destination-highlights .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .travel-destination-details .destination-highlights .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .destination-highlights .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .travel-destination-details .destination-highlights .section-header p {
+            font-size: 1.125rem;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .travel-destination-details .destination-highlights .day-card {
+            background: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+
+        .travel-destination-details .destination-highlights .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-image {
+            position: relative;
+            overflow: hidden;
+            height: 290px;
+            background: linear-gradient(135deg, var(--accent-color), #c0392b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--contrast-color);
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-image .day-number {
+            background: color-mix(in srgb, var(--contrast-color), transparent 20%);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content {
+            padding: 30px;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content h4 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .activity-item {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+            padding: 8px 0;
+            border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .activity-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .special-activity {
+            background: color-mix(in srgb, var(--accent-color), transparent 90%);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            margin: 10px 0;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .hotel-info {
+            background: color-mix(in srgb, #3498db, transparent 90%);
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #2c5282;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .hotel-info::before {
+            content: '🏨 ';
+            margin-right: 8px;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .cultural-activity::before {
+            content: '⛩️ ';
+            margin-right: 8px;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .hiking-info::before {
+            content: '🥾 ';
+            margin-right: 8px;
+        }
+
+        .travel-destination-details .destination-highlights .day-card .day-content .village-info::before {
+            content: '🏘️ ';
+            margin-right: 8px;
+        }
+        
+        .travel-destination-details .destination-highlights .day-card .day-content .camp-info::before {
+            content: '⛺ ';
+            margin-right: 8px;
+        }
+
+        .travel-destination-details .available-tours {
+            margin-bottom: 120px;
+        }
+
+        .travel-destination-details .available-tours .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .travel-destination-details .available-tours .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .available-tours .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .travel-destination-details .available-tours .section-header p {
+            font-size: 1.125rem;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+        }
+
+        .travel-destination-details .available-tours .tour-card {
+            background: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .travel-destination-details .available-tours .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-image .tour-duration {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: color-mix(in srgb, var(--accent-color), transparent 10%);
+            color: var(--contrast-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content {
+            padding: 30px;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content h4 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+            margin-bottom: 25px;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .tour-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .tour-meta .tour-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .tour-meta .tour-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #ffc107;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .tour-meta .tour-rating span {
+            color: var(--default-color);
+            font-weight: 500;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .btn-tour {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .btn-tour:hover {
+            color: var(--heading-color);
+            gap: 12px;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .btn-tour i {
+            transition: transform 0.3s ease;
+        }
+
+        .travel-destination-details .available-tours .tour-card .tour-content .btn-tour:hover i {
+            transform: translateX(3px);
+        }
+
+        .travel-destination-details .practical-info {
+            margin-bottom: 120px;
+        }
+
+        .travel-destination-details .practical-info .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .travel-destination-details .practical-info .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .travel-destination-details .practical-info .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .travel-destination-details .practical-info .section-header p {
+            font-size: 1.125rem;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+        }
+
+        .travel-destination-details .practical-info .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .travel-destination-details .practical-info .info-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--surface-color);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 92%);
+        }
+
+        .travel-destination-details .practical-info .info-item .info-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--contrast-color);
+            font-size: 1.2rem;
+        }
+
+        .travel-destination-details .practical-info .info-item .info-content h5 {
+            color: var(--heading-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .travel-destination-details .practical-info .info-item .info-content p {
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }

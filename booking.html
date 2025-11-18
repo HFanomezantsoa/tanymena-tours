@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tany Mena Tours</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/LTMT.jpg" rel="icon">
+  <link href="assets/img/LTMT.jpg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <img src="assets/img/LTMT.jpg" alt="logo tany mena tours" class="img-fluid" style="width: 85px; height: 800%; margin-left: 20px;">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="destinations.html" data-i18n="destinations">Destinations</a></li>
+          <li><a href="excursions_a_theme.html" data-i18n="excursions_a_theme">Excursions à thèmes</a></li>
+          <li><a href="tours.html" data-i18n="tours">Tours</a></li>
+          
+          <li><a href="vehicle-rental.html" data-i18n="vehicle-rental">Vehicle Rental</a></li>
+          <li><a href="vie_culturelle.html" data-i18n="vie_culturelle">Culture & Evenement</a></li>
+          <li class="dropdown"><a href="#"><span data-i18n="more_pages">More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <!-- <li><a href="destination-details.html" data-i18n="destination_details">Destination Details</a></li> -->
+              <!-- <li><a href="tour-details.html" data-i18n="tour_details">Tour Details</a></li>             -->
+              <li><a href="booking.html" data-i18n="booking">Booking</a></li>
+              <li><a href="faq.html" data-i18n="faq">Frequently Asked Questions</a></li>
+              <!-- <li><a href="vehicle-details.html" data-i18n="vehicle_details">Vehicle Details</a></li> -->
+              <!-- <li><a href="excursions_a_theme_details.html">Excursions details</a></li> -->
+              <li><a href="partner.html" data-i18n="partner">Partner</a></li>
+              <li><a href="advises.html" data-i18n="advises">Advises</a></li>
+              <li><a href="404.html" data-i18n="not_found">404</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(assets/img/travel/arbre.jpg);">
+      <div class="container position-relative">
+        <h1>Booking</h1>
+        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Booking</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Travel Booking Section -->
+    <section id="travel-booking" class="travel-booking section">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="booking-form">
+
+              <form action="forms/booking.php" class="php-email-form">
+
+                <!-- Step 1: Select Tour & Dates -->
+                <div class="booking-step" id="step-1">
+                  <div class="step-header">
+                    <h3>Step 1: Select Tour &amp; Travel Dates</h3>
+                    <p>Choose your preferred tour package and travel dates</p>
+                  </div>
+
+                  <div class="step-content">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="tour-package">Tour Package</label>
+                          <select name="tour_package" id="tour-package" class="form-select" required="">
+                            <option value="">Choose a tour package</option>
+                            <option value="european-discovery">European Discovery - 10 Days</option>
+                            <option value="asian-adventure">Asian Adventure - 14 Days</option>
+                            <option value="african-safari">African Safari - 12 Days</option>
+                            <option value="south-american">South American Explorer - 16 Days</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="departure-date">Departure Date</label>
+                          <input type="date" name="departure_date" id="departure-date" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="return-date">Return Date</label>
+                          <input type="date" name="return_date" id="return-date" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="adults">Number of Adults</label>
+                          <select name="adults" id="adults" class="form-select" required="">
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                            <option value="5">5+ Adults</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="children">Number of Children</label>
+                          <select name="children" id="children" class="form-select">
+                            <option value="0">No Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                            <option value="4">4+ Children</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2: Traveler Information -->
+                <div class="booking-step" id="step-2">
+                  <div class="step-header">
+                    <h3>Step 2: Traveler Information</h3>
+                    <p>Please provide details for the primary traveler</p>
+                  </div>
+
+                  <div class="step-content">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="first-name">First Name</label>
+                          <input type="text" name="first_name" id="first-name" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="last-name">Last Name</label>
+                          <input type="text" name="last_name" id="last-name" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email">Email Address</label>
+                          <input type="email" name="email" id="email" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="phone">Phone Number</label>
+                          <input type="tel" name="phone" id="phone" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="nationality">Nationality</label>
+                          <select name="nationality" id="nationality" class="form-select" required="">
+                            <option value="">Select nationality</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="passport">Passport Number</label>
+                          <input type="text" name="passport" id="passport" class="form-control" required="">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="special-requests">Special Requests or Dietary Requirements</label>
+                          <textarea name="special_requests" id="special-requests" rows="4" class="form-control" placeholder="Please let us know about any special requirements..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 3: Additional Options -->
+                <div class="booking-step" id="step-3">
+                  <div class="step-header">
+                    <h3>Step 3: Additional Options</h3>
+                    <p>Enhance your travel experience with these optional services</p>
+                  </div>
+
+                  <div class="step-content">
+                    <div class="add-ons-grid">
+                      <div class="add-on-item">
+                        <div class="add-on-header">
+                          <input type="checkbox" name="travel_insurance" id="travel-insurance" value="yes">
+                          <label for="travel-insurance">
+                            <i class="bi bi-shield-check"></i>
+                            <strong>Travel Insurance</strong>
+                            <span class="price">+$89</span>
+                          </label>
+                        </div>
+                        <p>Comprehensive coverage for your entire trip including medical emergencies and trip cancellation.</p>
+                      </div>
+
+                      <div class="add-on-item">
+                        <div class="add-on-header">
+                          <input type="checkbox" name="airport_transfer" id="airport-transfer" value="yes">
+                          <label for="airport-transfer">
+                            <i class="bi bi-car-front"></i>
+                            <strong>Airport Transfer</strong>
+                            <span class="price">+$45</span>
+                          </label>
+                        </div>
+                        <p>Private airport pickup and drop-off service for a hassle-free start and end to your journey.</p>
+                      </div>
+
+                      <div class="add-on-item">
+                        <div class="add-on-header">
+                          <input type="checkbox" name="hotel_upgrade" id="hotel-upgrade" value="yes">
+                          <label for="hotel-upgrade">
+                            <i class="bi bi-building"></i>
+                            <strong>Hotel Upgrade</strong>
+                            <span class="price">+$150</span>
+                          </label>
+                        </div>
+                        <p>Upgrade to premium hotels with better amenities and locations throughout your trip.</p>
+                      </div>
+
+                      <div class="add-on-item">
+                        <div class="add-on-header">
+                          <input type="checkbox" name="private_guide" id="private-guide" value="yes">
+                          <label for="private-guide">
+                            <i class="bi bi-person-badge"></i>
+                            <strong>Private Guide</strong>
+                            <span class="price">+$200</span>
+                          </label>
+                        </div>
+                        <p>Personal tour guide for select destinations to provide exclusive insights and personalized experience.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4: Payment Information -->
+                <div class="booking-step" id="step-4">
+                  <div class="step-header">
+                    <h3>Step 4: Payment Information</h3>
+                    <p>Secure payment processing with 256-bit SSL encryption</p>
+                  </div>
+
+                  <div class="step-content">
+                    <div class="payment-methods">
+                      <div class="payment-method active">
+                        <input type="radio" name="payment_method" id="credit-card" value="credit_card" checked="">
+                        <label for="credit-card">
+                          <i class="bi bi-credit-card"></i>
+                          Credit/Debit Card
+                        </label>
+                      </div>
+                      <div class="payment-method">
+                        <input type="radio" name="payment_method" id="paypal" value="paypal">
+                        <label for="paypal">
+                          <i class="bi bi-paypal"></i>
+                          PayPal
+                        </label>
+                      </div>
+                      <div class="payment-method">
+                        <input type="radio" name="payment_method" id="bank-transfer" value="bank_transfer">
+                        <label for="bank-transfer">
+                          <i class="bi bi-bank"></i>
+                          Bank Transfer
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="credit-card-form">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" name="card_number" id="card-number" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="form-group">
+                            <label for="card-name">Cardholder Name</label>
+                            <input type="text" name="card_name" id="card-name" class="form-control" placeholder="John Doe">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="card-expiry">Expiry Date</label>
+                            <input type="text" name="card_expiry" id="card-expiry" class="form-control" placeholder="MM/YY" maxlength="5">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="card-cvv">CVV</label>
+                            <input type="text" name="card_cvv" id="card-cvv" class="form-control" placeholder="123" maxlength="4">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="secure-badge">
+                      <i class="bi bi-shield-lock"></i>
+                      <span>Your payment information is secure and encrypted</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 5: Review & Confirmation -->
+                <div class="booking-step" id="step-5">
+                  <div class="step-header">
+                    <h3>Step 5: Review &amp; Confirmation</h3>
+                    <p>Please review your booking details before confirming</p>
+                  </div>
+
+                  <div class="step-content">
+                    <div class="partner-conditions">
+                      <div class="form-check">
+                        <input type="checkbox" name="partner_agreement" id="partner-agreement" class="form-check-input" required="">
+                        <label for="partner-agreement" class="form-check-label">
+                          I agree to the <a href="#" target="_blank">Partner and Conditions</a> and <a href="#" target="_blank">Advises Policy</a>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" name="newsletter" id="newsletter" class="form-check-input">
+                        <label for="newsletter" class="form-check-label">
+                          Subscribe to our newsletter for exclusive travel deals and updates
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-check-circle"></i>
+                        Complete Booking
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="booking-summary">
+              <div class="summary-header">
+                <h4>Booking Summary</h4>
+              </div>
+
+              <div class="summary-content">
+                <div class="selected-tour">
+                  <img src="assets/img/travel/destination-8.webp" alt="Tour" class="img-fluid">
+                  <div class="tour-info">
+                    <h5>European Discovery</h5>
+                    <p>10 Days • 8 Cities</p>
+                    <div class="tour-rating">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                      <span>4.8 (324 reviews)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="booking-details">
+                  <div class="detail-row">
+                    <span>Departure Date:</span>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div class="detail-row">
+                    <span>Return Date:</span>
+                    <span>March 25, 2024</span>
+                  </div>
+                  <div class="detail-row">
+                    <span>Travelers:</span>
+                    <span>2 Adults</span>
+                  </div>
+                </div>
+
+                <div class="price-breakdown">
+                  <h6>Price Breakdown</h6>
+                  <div class="price-row">
+                    <span>Tour Package (2 adults)</span>
+                    <span>$2,980</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Travel Insurance</span>
+                    <span>$89</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Airport Transfer</span>
+                    <span>$45</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Taxes &amp; Fees</span>
+                    <span>$156</span>
+                  </div>
+                  <div class="price-total">
+                    <span>Total Amount</span>
+                    <span>$3,270</span>
+                  </div>
+                </div>
+
+                <div class="payment-security">
+                  <div class="security-badges">
+                    <i class="bi bi-shield-check"></i>
+                    <span>SSL Secured</span>
+                  </div>
+                  <div class="accepted-cards">
+                    <i class="bi bi-credit-card"></i>
+                    <span>All major cards accepted</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="help-section">
+                <h6>Need Help?</h6>
+                <p>Our travel experts are here to assist you</p>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <span>support@example.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Travel Booking Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+   <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <span class="sitename">TanyMenaTours</span>
+            </a>
+            <p class="mb-4">Tany Mena Tours is a local agency based in Nosy Be, specializing in organizing sea excursions, custom tours, and cultural discoveries. Our passionate team is here to guide you in experiencing a unique and authentic adventure in Madagascar.
+            </p>
+            <div class="newsletter-form">
+              <h5>Stay Updated</h5>
+              <form action="forms/newsletter.php" method="post" class="php-email-form">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
+                  <button type="submit" class="btn-subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Thank you for subscribing!</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-lg-2 col-6">
+        <div class="footer-links">
+        <h4>À propos</h4>
+        <ul>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Notre histoire</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Équipe</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Nos valeurs</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Témoignages</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-6">
+      <div class="footer-links">
+        <h4>Excursions</h4>
+        <ul>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Île de Nosy Komba</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Nosy Tanikely</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Nosy Iranja</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Tour de l'île</a></li>
+          <li><a href="#"><i class="bi bi-chevron-right"></i> Circuits personnalisés</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+        <div class="col-lg-4">
+          <div class="footer-contact">
+            <h4>Get in Touch</h4>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-info">
+                <p> Nosy Be Hell Ville<br> Madagascar</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-info">
+                <p>034 00 000 00</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <p>tanymenatours@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/tanymena.tours15"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/tmt_madagascar"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">TanyMenaTour</strong> <span>All Rights Reserved</span></p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer-bottom-links">
+              <a href="#">Advises Policy</a>
+              <a href="#">Partner of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <div class="credits">
+              Designed by <a href="#">Fanomezantsoa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+<script src="assets/js/lang.js"></script>
+
+</html>

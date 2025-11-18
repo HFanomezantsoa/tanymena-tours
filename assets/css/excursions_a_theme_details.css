@@ -1,0 +1,456 @@
+/* ===================================
+   Tany Mena Tours - Excursions Details
+   =================================== */
+
+:root {
+    --primary-color: #c41e3a;
+    --secondary-color: #2d5016;
+    --accent-color: #f95e4d;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --gray-light: #e9ecef;
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+    
+    --transition: all 0.3s ease;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===================================
+   Excursions Details
+   =================================== */
+
+.excursions-details {
+    padding: 4rem 0;
+    background: var(--light-color);
+}
+
+.excursion-detail {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    scroll-margin-top: 200px;
+}
+
+.excursion-detail:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.excursion-detail:target {
+    animation: highlightExcursion 2s ease;
+}
+
+@keyframes highlightExcursion {
+    0%, 100% { background: var(--white); }
+    50% { background: #fff8f0; }
+}
+
+.detail-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    height: 100%;
+    min-height: 300px;
+}
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.detail-image:hover img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(196,30,58,0.8), rgba(45,80,22,0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.detail-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay i {
+    font-size: 4rem;
+    color: var(--white);
+    transform: scale(0.5);
+    transition: var(--transition);
+}
+
+.detail-image:hover .image-overlay i {
+    transform: scale(1);
+}
+
+.detail-content {
+    padding: 1rem 0;
+}
+
+.detail-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), #a01828);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.detail-subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.detail-description {
+    font-size: 1.05rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.detail-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--light-color);
+    border-radius: 50px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.feature-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Option Cards for Équestre */
+.option-card {
+    background: var(--light-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.option-card:hover {
+    background: #fff8f0;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(5px);
+}
+
+.option-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.option-note {
+    font-style: italic;
+    color: var(--gray);
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.collaboration-note {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--light-color);
+    border-radius: 12px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+.collaboration-note i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* ===================================
+   Call to Action
+   =================================== */
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 5rem 0;
+    color: var(--white);
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-cta-primary,
+.btn-cta-secondary {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.btn-cta-primary {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-cta-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-cta-primary:hover {
+    background: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-cta-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===================================
+   Animations
+   =================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .detail-title {
+        font-size: 2rem;
+    }
+    
+    .detail-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .excursion-detail {
+        padding: 2rem;
+    }
+    
+    .cta-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .quick-nav {
+        padding: 1rem 0;
+    }
+    
+    .quick-nav-item {
+        min-height: 80px;
+        padding: 0.75rem;
+    }
+    
+    .quick-nav-item i {
+        font-size: 1.5rem;
+    }
+    
+    .quick-nav-item span {
+        font-size: 0.75rem;
+    }
+    
+    .detail-title {
+        font-size: 1.75rem;
+    }
+    
+    .detail-subtitle {
+        font-size: 1rem;
+    }
+    
+    .detail-description {
+        font-size: 0.95rem;
+    }
+    
+    .excursion-detail {
+        padding: 1.5rem;
+    }
+    
+    .detail-features {
+        gap: 0.75rem;
+    }
+    
+    .feature-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .detail-image {
+        min-height: 250px;
+    }
+    
+    .option-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Cache tous les détails d'excursions par défaut */
+.excursion-detail {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Affiche la section active avec un effet de fondu */
+.excursion-detail.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
